@@ -1,0 +1,19 @@
+version: "3.1"
+
+services:
+  simap-ver5:
+    image: mariadb
+    container_name: sda2_database
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MARIADB_DATABASE: sda2_database
+      MARIADB_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer
+    container_name: sda2_adminer
+    restart: always
+    ports:
+      - 8080:8080
